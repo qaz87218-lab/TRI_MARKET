@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#111827" />
+  <meta name="description" content="TRI-MARKET 台・日・美股研究台" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>TRI-MARKET｜台・日・美股研究台</title>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">T</div>
+        <div><strong>TRI-MARKET</strong><small>台・日・美股研究台</small></div>
+      </div>
+      <nav>
+        <button class="nav-btn active" data-view="dashboard">🏠 總覽</button>
+        <button class="nav-btn" data-view="watchlist">⭐ 研究清單</button>
+        <button class="nav-btn" data-view="tw">🇹🇼 台股</button>
+        <button class="nav-btn" data-view="jp">🇯🇵 日股</button>
+        <button class="nav-btn" data-view="us">🇺🇸 美股</button>
+        <button class="nav-btn" data-view="analysis">⚡ 即時分析</button>
+        <button class="nav-btn" data-view="earnings">📅 財報日曆</button>
+        <button class="nav-btn" data-view="macro">🌎 Macro Radar</button>
+        <button class="nav-btn" data-view="news">📰 News Intelligence</button>
+        <button class="nav-btn" data-view="notes">📝 研究筆記</button>
+        <button class="nav-btn" data-view="settings">⚙️ 資料源 / 備份</button>
+      </nav>
+      <div class="sidebar-foot">
+        <small>PRICE × FLOW × FUNDAMENTALS × VALUATION</small>
+        <small class="sidebar-version">Prototype v0.1</small>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button id="menuBtn" class="icon-btn" aria-label="開啟選單">☰</button>
+        <div>
+          <h1 id="pageTitle">市場總覽</h1>
+          <p id="pageSubtitle">追蹤價格，更追蹤資金、基本面與市場預期的變化。</p>
+        </div>
+        <div class="top-actions">
+          <button id="addStockBtn" class="btn primary">＋ 新增個股</button>
+          <span class="pill" id="dataModePill">DEMO</span>
+        </div>
+      </header>
+
+      <div id="demoBanner" class="demo-banner">
+        <b>目前為 Prototype / Demo Data。</b> UI、研究庫、權重模型與本機儲存可直接操作；接上後端 API 後才會顯示真實市場資料。
+      </div>
+
+      <section id="view-dashboard" class="view active"></section>
+      <section id="view-watchlist" class="view"></section>
+      <section id="view-tw" class="view"></section>
+      <section id="view-jp" class="view"></section>
+      <section id="view-us" class="view"></section>
+      <section id="view-analysis" class="view"></section>
+      <section id="view-earnings" class="view"></section>
+      <section id="view-macro" class="view"></section>
+      <section id="view-news" class="view"></section>
+      <section id="view-notes" class="view"></section>
+      <section id="view-settings" class="view"></section>
+    </main>
+  </div>
+
+  <div id="stockModal" class="modal-backdrop" hidden></div>
+  <div id="toast" class="toast" role="status"></div>
+  <input id="importFile" type="file" accept="application/json" hidden />
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

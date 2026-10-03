@@ -1,0 +1,10 @@
+name = "tri-market-api"
+main = "worker.js"
+compatibility_date = "2026-10-01"
+
+# Add secrets with:
+# wrangler secret put FUGLE_API_KEY
+# wrangler secret put JQUANTS_API_KEY
+# wrangler secret put ALPACA_KEY_ID
+# wrangler secret put ALPACA_SECRET_KEY
+# wrangler secret put SEC_USER_AGENT

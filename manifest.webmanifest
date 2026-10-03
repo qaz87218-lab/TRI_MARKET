@@ -1,0 +1,9 @@
+{
+  "name": "TRI-MARKET 台・日・美股研究台",
+  "short_name": "TRI-MARKET",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f6f7fb",
+  "theme_color": "#111827",
+  "lang": "zh-Hant"
+}
